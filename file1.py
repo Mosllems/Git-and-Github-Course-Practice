@@ -1,2 +1,2 @@
 Hi
-Bye
+To all people around the world
