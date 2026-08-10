@@ -1,16 +1,43 @@
-from datetime import datetime
+import datetime
 
-user_name = input("Please enter your name: ")
-user_message = input("Please enter your message: ")
 
-if user_message == "Hello":
-    print(f"Hi {user_name} How are you doing? \nIs everything on trach?")
+def get_user_name():
+    user_name = input("Please enter your name: ")
+    return user_name
 
-elif user_message == "How are you?":
-    print(f"Thanks! \nHow can I help you today?")
+def get_user_message():
+    messages = ['hello', 'how are you?', 'what day is today?', 'what time is it?', 'introduce yourself', 'bye']
+    user_message = input("Please enter your message: ")
+    user_message.lower()
+    if user_message not in messages:
+        print("You entered a wrong input please try again!")
 
-elif user_message == "What day is today?":
-    print(f"Today is {datetime.today().strftime('%Y-%m-%d')}")
+    return user_message
 
-elif user_message == "Introduce yourself":
-    print(f"I'm a mini chatbot built by Moslem Amiri")
+
+user_name = get_user_name()
+
+
+while True:
+
+    user_message= get_user_message()
+
+    if user_message == "hello":
+        print(f"Hi {user_name}\nI hope you are doing well")
+
+    elif user_message == "how are you?":
+        print(f"Thanks! \nHow can I help you today?")
+        
+    elif user_message == "what day is today?":
+        print(f"Today is {datetime.today().strftime('%Y-%m-%d')}")
+
+    elif user_message == "what time is it?":
+        print(f"Time is {datetime.datetime.now().time().isoformat(timespec='seconds')}")
+        
+    elif user_message == "introduce yourself":
+        print(f"I'm a mini chatbot built by Moslem Amiri")
+
+    elif user_message == "bye":
+        print(f"Bye for now {user_name}!\nI look forward to seeing you agin.")
+        break
+        
