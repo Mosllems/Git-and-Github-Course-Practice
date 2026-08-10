@@ -1,1 +1,1 @@
-From
+print("From")
