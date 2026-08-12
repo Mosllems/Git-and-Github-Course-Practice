@@ -1,2 +1,2 @@
-Moslem Amiri
-from Iran
+print("Moslem Amiri")
+print("From Iran")
