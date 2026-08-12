@@ -1,2 +1,2 @@
-Hi
-To all people around the world
+print('Hi')
+print("To all people arount the world")
